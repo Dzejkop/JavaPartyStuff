@@ -25,12 +25,25 @@ public class TrdController {
 		return "kot";
 	}
 	
+	@RequestMapping("/koty")
 	public String showCats(Model model) {
-		return "";
+		
+		String[] cats = trdDao.getAll();
+		
+		model.addAttribute("koty", cats);
+		
+		return "ShowCats";
 	}
 	
 	public String catDetails(String catName, Model model) {
-		return "";
+		
+		String[] det = trdDao.showDetails(catName);
+		
+		model.addAttribute("imie", det[0]);
+		model.addAttribute("age", det[1]);
+		model.addAttribute("evil", det[2]);
+		
+		return "CatDetails";
 	}
 	
 	@RequestMapping("/kot/{imie}/{wiek}/{zlo}")
