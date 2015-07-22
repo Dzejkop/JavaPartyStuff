@@ -6,10 +6,16 @@
 		<artifactId>InvisiSnake3</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>Trad-application</artifactId>
-	<packaging>jar</packaging>
-
+	<artifactId>Trad-webapp</artifactId>
+	<packaging>war</packaging>
 	<dependencies>
+
+		<dependency>
+			<groupId>com.invisi.snake</groupId>
+			<artifactId>Trad-application</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -23,10 +29,17 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.invisi.snake</groupId>
-			<artifactId>Trad-domain</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>4.1.7.RELEASE</version>
 		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
 
 	</dependencies>
 </project>

@@ -46,5 +46,6 @@
 	<modules>
 		<module>Trad-application</module>
 		<module>Trad-domain</module>
+		<module>Trad-webapp</module>
 	</modules>
 </project>

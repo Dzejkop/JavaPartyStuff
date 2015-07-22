@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Build-Jdk: 1.7.0_67
-Built-By: student12
-Created-By: Maven Integration for Eclipse
-Main-Class: com.invisi.snake.InvisiSnake3.App
-
