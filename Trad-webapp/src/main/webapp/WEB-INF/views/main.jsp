@@ -6,9 +6,14 @@
 </head>
 <body>
 
-<h1>Some text</h1>
-<h3>Other text</h4>
-<h5>${message}</h5>
+<h1>How many users do you want?</h1>
+
+<!--
+<form action="">
+<input type="text" name="number" value="0"/>
+<input type="submit" value="Submit"/>
+</form>
+-->
 
 </body>
 </html>
