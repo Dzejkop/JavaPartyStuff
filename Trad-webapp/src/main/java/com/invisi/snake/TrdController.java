@@ -14,19 +14,18 @@ public class TrdController {
 	@Autowired
 	private UsersREPO usersRepo;
 	
-	@RequestMapping("/")
+	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String mainPage() {
 		return "main";
 	}
 	
-	@RequestMapping("/test")
-	public String test() {
+	@RequestMapping(value="/", method=RequestMethod.POST)
+	public String mainPageSubmit(@RequestParam("userNumber") Integer userNumber, Model model) {
+		
+		model.addAttribute("userNumber", userNumber);
+		
 		return "main";
 	}
-	
-	@RequestMapping(value="/", method=RequestMethod.POST)
-	public String mainPageSubmit() {
-		return "inputUsers";
-	}
+
 
 }
