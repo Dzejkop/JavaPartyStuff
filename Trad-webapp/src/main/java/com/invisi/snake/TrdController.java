@@ -54,6 +54,6 @@ public class TrdController {
 			usersRepo.addUser(u);
 		}
 				
-		return new ModelAndView("main", "userCount", new Integer(usersRepo.getUsersList().size()));
+		return new ModelAndView("redirect:/");
 	}
 }
