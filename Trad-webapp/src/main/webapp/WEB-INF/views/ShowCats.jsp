@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Hej!</h1>
-<h3>Twoje pieprzone koty: </h4>
+<h3>Twoje koty: </h4>
 
 <c:forEach var="element" items="${koty}">
    Element ${element}<br />

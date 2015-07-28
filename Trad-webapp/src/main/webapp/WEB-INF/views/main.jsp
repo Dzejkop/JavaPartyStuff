@@ -6,8 +6,8 @@
 </head>
 <body>
 
-<h1>Talk shit</h1>
-<h3>Get hit</h4>
+<h1>Some text</h1>
+<h3>Other text</h4>
 <h5>${message}</h5>
 
 </body>
