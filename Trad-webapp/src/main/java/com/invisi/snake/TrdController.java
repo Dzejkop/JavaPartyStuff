@@ -20,8 +20,8 @@ public class TrdController {
 	private UsersREPO usersRepo;
 	
 	@RequestMapping(value="/", method=RequestMethod.GET)
-	public String mainPage() {
-		return "main";
+	public ModelAndView mainPage() {
+		return new ModelAndView("main", "userCount", new Integer(usersRepo.getUsersList().size()));
 	}
 	
 	@RequestMapping(value="/addUsers", method=RequestMethod.POST)
@@ -54,6 +54,6 @@ public class TrdController {
 			usersRepo.addUser(u);
 		}
 				
-		return new ModelAndView("main");
+		return new ModelAndView("main", "userCount", new Integer(usersRepo.getUsersList().size()));
 	}
 }

@@ -6,6 +6,8 @@
 </head>
 <body>
 
+<h1>You have a total of ${userCount} users</h1>
+
 <h1>Add new users?</h1>
 
 Amount:
