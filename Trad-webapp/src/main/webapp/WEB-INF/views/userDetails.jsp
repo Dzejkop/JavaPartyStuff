@@ -9,11 +9,15 @@
 <h1>Your user:</h1>
 
 <h2>
-Name: ${user.firstName}
+ID: ${user.id}
 </h2>
 
 <h2>
-Last Name: ${user.lastName}
+Name: ${user.name}
+</h2>
+
+<h2>
+Last Name: ${user.surname}
 </h2>
 
 </body>

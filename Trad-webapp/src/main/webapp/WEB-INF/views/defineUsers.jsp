@@ -18,10 +18,10 @@
 			</tr>
 			<c:forEach items="${usersForm.users}" var="user" varStatus="status">
 				<tr>
-					<td><input name="users[${status.index}].firstName"
-						value="${user.firstName}" /></td>
-					<td><input name="users[${status.index}].lastName"
-						value="${user.lastName }" /></td>
+					<td><input name="users[${status.index}].name"
+						value="${user.name}" /></td>
+					<td><input name="users[${status.index}].surname"
+						value="${user.surname }" /></td>
 				</tr>
 			</c:forEach>
 		</table>

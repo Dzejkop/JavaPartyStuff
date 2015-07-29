@@ -1,17 +1,18 @@
-package com.invisi.snake;
+package com.invisi.snake.controller;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.invisi.snake.repository.UsersREPO;
+import com.invisi.snake.service.User;
+
 
 @Controller
 public class TrdController {
@@ -21,7 +22,8 @@ public class TrdController {
 	
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public ModelAndView mainPage() {
-		return new ModelAndView("main", "userCount", new Integer(usersRepo.getUsersList().size()));
+				
+		return new ModelAndView("main");
 	}
 	
 	@RequestMapping(value="/addUsers", method=RequestMethod.POST)
@@ -37,7 +39,17 @@ public class TrdController {
 	
 	@RequestMapping(value="/checkUser", method=RequestMethod.POST)
 	public ModelAndView getUserDetails(@RequestParam("userIndex") Integer userIndex) {
-		return new ModelAndView("userDetails", "user", usersRepo.getUsersList().get(userIndex.intValue()));
+		
+		User user = usersRepo.getUserById(userIndex.intValue());
+		
+		System.out.println("User is: " + user);
+		
+		return new ModelAndView("userDetails", "user", user);
+	}
+	
+	@RequestMapping(value="/allUsers", method=RequestMethod.GET)
+	public ModelAndView showAllUsers() {
+		return new ModelAndView("allUsers", "users", usersRepo.getUsersList());
 	}
 	
 	@RequestMapping(value="/save", method=RequestMethod.POST)
@@ -45,15 +57,11 @@ public class TrdController {
 		
 		List<User> users = form.getUsers();
 		
-		for(User u : users) {
-			System.out.println("Adding user...");
-			System.out.println("User name: " + u.getFirstName());
-			System.out.println("User last name: " + u.getLastName());
-			System.out.println("");
-			
+		for(User u : users) {	
+			System.out.println("User: " + u.getName() + " " + u.getSurname());
 			usersRepo.addUser(u);
 		}
-				
+						
 		return new ModelAndView("redirect:/");
 	}
 }

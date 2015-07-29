@@ -1,7 +1,9 @@
-package com.invisi.snake;
+package com.invisi.snake.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.invisi.snake.service.User;
 
 public class UsersForm {
 	
@@ -21,7 +23,7 @@ public class UsersForm {
 	
 	public void createDoes(int i) {
 		for(int n = 0; n < i; n++) {
-			users.add(new User("John", "Doe"));
+			users.add(new User());
 		}
 	}
 }
