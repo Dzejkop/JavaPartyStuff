@@ -5,7 +5,7 @@ h1 {
 }
 
 body {
-  background-color: #74afb3;
+  background-color: #d0edff;
   padding: 0px;
   margin: 0px;
 }
@@ -17,7 +17,7 @@ body {
 
 .panel {
   width: 20%;
-  background-color: #bbe2e4;
+  background-color: #65a5cd;
   box-shadow: 2px 5px rgba(0, 0, 0, 0.76);
   margin: 20px auto;
   padding: 5px;
@@ -25,6 +25,6 @@ body {
 
 .header {
   width: 100%;
-  background-color: #2d80c4;
+  background-color: #65a5cd;
   box-shadow: 0px 1px rgba(0, 0, 0, 0.7);
 }
