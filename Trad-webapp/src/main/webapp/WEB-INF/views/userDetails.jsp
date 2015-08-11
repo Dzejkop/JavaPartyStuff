@@ -1,24 +1,33 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Starting page</title>
+  <meta charset="UTF-8">
+  <title>Starting page</title>
+  <link href="<c:url value="/res/style.css" />" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="<c:url value="/script/jq.js" />"></script>
 </head>
 <body>
+  <div class="content">
 
-<h1>Your user:</h1>
+    <div class="header">
+      <h1>Your user</h1>
+    </div>
 
-<h2>
-ID: ${user.id}
-</h2>
+    <div class="panel">
+      <p>
+      ID: ${user.id}
+      </p>
 
-<h2>
-Name: ${user.name}
-</h2>
+      <p>
+      Name: ${user.name}
+      </p>
 
-<h2>
-Last Name: ${user.surname}
-</h2>
-
+      <p>
+      Last Name: ${user.surname}
+      </p>
+    </div>
+  </div>
 </body>
 </html>

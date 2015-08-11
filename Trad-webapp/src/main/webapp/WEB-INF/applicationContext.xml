@@ -18,6 +18,8 @@
 	<!-- To na przyszłość, pozwoli nam korzystać z adnotacji także w klasach, 
 		które byśmy skonfigurowali ręcznie -->
 
+	<mvc:annotation-driven></mvc:annotation-driven>
+
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
@@ -35,5 +37,8 @@
 		<property name="username" value="musicart_5" />
 		<property name="password" value="dRa3weHu" />
 	</bean>
+	
+	<mvc:resources mapping="/res/**" location="/res/styles/" />
+	<mvc:resources location="res/scripts/" mapping="/script/**"/>
 
 </beans>

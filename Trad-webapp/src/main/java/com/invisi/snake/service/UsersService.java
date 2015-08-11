@@ -9,6 +9,7 @@ import com.invisi.snake.repository.UsersREPO;
 
 public class UsersService {
 	
+	@Autowired
 	UsersREPO usersRepo;
 	
 	public List<User> getAllUsers() {
